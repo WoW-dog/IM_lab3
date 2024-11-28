@@ -43,8 +43,10 @@ int main(){
         if (!inTransfer) {
             std::cout << "Перевозим товар?(да - 1/ нет - 0):\n";
             std::cin >> transferEnabled;
-            std::cout << "Введите объем перевозки [20 - 100]:\n";
-            std::cin >> volumeOfTransfer;
+            if (transferEnabled) {
+                std::cout << "Введите объем перевозки [20 - 100]:\n";
+                std::cin >> volumeOfTransfer;
+            }
         }
 
         std::cout << "Продаем товар?(да - 1/ нет - 0):\n";
